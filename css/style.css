@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    --primary-text: #242c1c;
+    --primary: #aae377;
+    --secondary: #86b15f;
+    --panel: #fff;
+    --background: #c6c6c6;
+    color: var(--primary-text);
+}
+.flex{
+    display: flex;
+}
+.jc-center{
+    justify-content: center;
+}
+.ai-center{
+    align-items: center;
+}
+
+body{
+    flex-direction: column;
+    font-family: 'Roboto',sans-serif;
+    background-color: var(--background);
+}
+
+header{
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 95vw
+}
+
+nav {
+    width: 95vw;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    background-color: var(--primary);
+
+    padding: .75rem;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+nav a:hover{
+    color: white;
+    background-color: var(--secondary);
+}
+
+.active{
+    color:white;
+    background: var(--secondary);
+}
+
+.logo {
+    height: 7.5rem;
+    width: 7.5rem;
+    background: var(--primary);
+    border-radius: 15px;
+}
+.logo p {
+    background-color: black;
+    color: var(--primary);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+/* @media screen and (min-width: 768px) {
+    header{
+        flex-direction: row;
+    }
+} */
