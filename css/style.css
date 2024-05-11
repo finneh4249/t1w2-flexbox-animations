@@ -1,12 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+:root {
+    --blur: 1.2600000000000005px;
+    --spread: -0.9000000000000004px;
+    --horiz: 0.5162187927159418px;
+    --vert: 0.7372368398600925px;
     --primary-text: #242c1c;
     --primary: #aae377;
     --secondary: #86b15f;
     --panel: #fff;
     --background: #c6c6c6;
+}
+
+*{
     color: var(--primary-text);
 }
 .flex{
@@ -23,21 +30,30 @@ body{
     flex-direction: column;
     font-family: 'Roboto',sans-serif;
     background-color: var(--background);
+    text-align:center;
 }
 
 header{
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    width: 95vw
+    width: 95vw;
+    margin-top: 1rem;
+    background-color: var(--panel);
+    box-shadow: calc(clamp(0px, var(--horiz), 2px)) calc(clamp(0px, var(--vert), 2px)) 2px calc(var(--spread)) rgba(0, 0, 0, 0.233), calc(2 * var(--horiz)) calc(2 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.20), calc(3 * var(--horiz)) calc(3 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.123), calc(5 * var(--horiz)) calc(5 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.076), calc(8 * var(--horiz)) calc(8 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.047), calc(13 * var(--horiz)) calc(13 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.028);
+    border-radius: 10px;
 }
 
 nav {
-    width: 100vw;
+    width: 95vw;
     justify-content: center;
+    flex-wrap:wrap;
     background-color: var(--panel);
     gap: 1rem;
     padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: calc(clamp(0px, var(--horiz), 2px)) calc(clamp(0px, var(--vert), 2px)) 2px calc(var(--spread)) rgba(0, 0, 0, 0.233), calc(2 * var(--horiz)) calc(2 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.20), calc(3 * var(--horiz)) calc(3 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.123), calc(5 * var(--horiz)) calc(5 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.076), calc(8 * var(--horiz)) calc(8 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.047), calc(13 * var(--horiz)) calc(13 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.028);
 }
 
 nav a{
@@ -73,8 +89,30 @@ nav a:hover{
     border-radius: 15px;
 }
 
-/* @media screen and (min-width: 768px) {
+.training-option{
+    margin-top: 3rem;
+    background-color: var(--panel);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: calc(clamp(0px, var(--horiz), 2px)) calc(clamp(0px, var(--vert), 2px)) 2px calc(var(--spread)) rgba(0, 0, 0, 0.233), calc(2 * var(--horiz)) calc(2 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.20), calc(3 * var(--horiz)) calc(3 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.123), calc(5 * var(--horiz)) calc(5 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.076), calc(8 * var(--horiz)) calc(8 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.047), calc(13 * var(--horiz)) calc(13 * var(--vert)) calc(var(--blur)) calc(var(--spread)) rgba(0, 0, 0, 0.028);
+}
+.training-option img{
+ width: 75dvw;
+ height: 75dvw;
+ border-radius: 1rem;
+}
+.training-section{
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
     header{
         flex-direction: row;
     }
-} */
+
+    .training-option img{
+        width:25dvw;
+        height: 25dvw;
+    }
+}
