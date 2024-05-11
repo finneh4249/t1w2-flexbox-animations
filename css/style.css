@@ -33,8 +33,9 @@ header{
 }
 
 nav {
-    width: 95vw;
+    width: 100vw;
     justify-content: center;
+    background-color: var(--panel);
     gap: 1rem;
     padding: 1rem;
 }
